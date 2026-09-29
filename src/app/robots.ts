@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://kasane-dining.example/sitemap.xml",
+    sitemap: "https://kyouichitani-cloud.github.io/kasane-dining/sitemap.xml",
   };
 }

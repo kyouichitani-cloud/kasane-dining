@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kasane-dining.example"),
+  metadataBase: new URL("https://kyouichitani-cloud.github.io/kasane-dining/"),
   title: {
     default: "KASANE | 季節を重ねるレストラン",
     template: "%s | KASANE",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "旬の食材を炭火の香りと発酵のうま味で仕立てる、大阪・北浜の季節料理レストラン。",
     type: "website",
     locale: "ja_JP",
-    images: [{ url: "/images/hero-kasane.webp", width: 1920, height: 1080 }],
+    images: [{ url: "images/hero-kasane.webp", width: 1920, height: 1080 }],
   },
   robots: { index: true, follow: true },
 };

@@ -22,11 +22,13 @@ const courses = [
   },
 ];
 
+const assetBasePath = process.env.GITHUB_ACTIONS === "true" ? "/kasane-dining" : "";
+
 const restaurantJsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   name: "KASANE",
-  image: "https://kasane-dining.example/images/hero-kasane.webp",
+        image: "https://kyouichitani-cloud.github.io/kasane-dining/images/hero-kasane.webp",
   servesCuisine: "Contemporary Japanese",
   priceRange: "¥¥¥",
   address: {
@@ -55,7 +57,7 @@ export default function Home() {
         <section className="hero" aria-labelledby="hero-title">
           <Image
             className="hero-image"
-            src="/images/hero-kasane.webp"
+            src={`${assetBasePath}/images/hero-kasane.webp`}
             alt="青を基調とした店内で、季節の魚料理を楽しむダイニング風景"
             fill
             priority
@@ -106,7 +108,7 @@ export default function Home() {
             <Reveal className="menu-visual">
               <div className="menu-visual-frame">
                 <Image
-                  src="/images/course-wagyu.webp"
+                  src={`${assetBasePath}/images/course-wagyu.webp`}
                   alt="炭火で焼いた和牛と季節野菜の一皿"
                   fill
                   sizes="(max-width: 767px) 92vw, (max-width: 1023px) 46vw, 44vw"
@@ -147,7 +149,7 @@ export default function Home() {
         <section id="space" className="space-section" aria-labelledby="space-title">
           <div className="space-image-wrap">
             <Image
-              src="/images/open-kitchen.webp"
+              src={`${assetBasePath}/images/open-kitchen.webp`}
               alt="料理人の仕事を間近に見られる青いオープンキッチン"
               fill
               sizes="100vw"
